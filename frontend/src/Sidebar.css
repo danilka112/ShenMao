@@ -1,0 +1,161 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px; /* высота вашей шапки */
+  width: 280px;
+  height: calc(100vh - 60px);
+  background: linear-gradient(135deg, #ffb6d5 0%, #ff69b4 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* центрируем по горизонтали */
+  /* УБРАТЬ: justify-content: center; */
+  box-shadow: 2px 0 12px rgba(255, 105, 180, 0.15);
+  z-index: 300;
+}
+
+.sidebar-close {
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  color: #c2185b;
+  align-self: flex-end;
+  margin: 18px 18px 0 0;
+  cursor: pointer;
+  z-index: 310;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 32px 24px 24px 24px;
+  width: 100%;
+}
+
+.sidebar-logo {
+  font-size: 2.5rem;
+  margin-right: 10px;
+  filter: drop-shadow(0 2px 8px #ffd1ec99);
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 48px 0 0 0; /* большой отступ сверху, чтобы меню было ниже кнопки "Войти" */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center; /* чтобы кнопки были по центру */
+}
+
+.sidebar-menu li {
+  width: calc(100% - 40px); /* кнопка уже ширины сайдбара */
+  margin: 0 auto;           /* центрируем кнопку */
+  box-sizing: border-box;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-left: 4px solid transparent;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background: #111 !important;
+  color: #ff69b4 !important;
+  border-radius: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px #ffd1ec66;
+}
+
+.sidebar-menu li.active,
+.sidebar-menu li:hover {
+  background: #222 !important;
+  color: #ffb6d5 !important;
+  border-left: 4px solid #ff69b4;
+}
+
+.sidebar-icon {
+  margin-right: 12px;
+  font-size: 1.4rem;
+}
+
+.sidebar-login-btn {
+  width: calc(100% - 40px);
+  margin: 24px auto 0 auto; /* сверху небольшой отступ, снизу 0 */
+  display: block;
+  background: #111 !important;
+  color: #ff69b4 !important;
+  border: none;
+  border-left: 4px solid #ff69b4;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px #ffd1ec66;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  padding: 16px 32px;
+  text-align: left;
+}
+
+.sidebar-login-btn:hover,
+.sidebar-login-btn:focus {
+  background: #222 !important;
+  color: #ffb6d5 !important;
+  border-left: 4px solid #ff69b4;
+  outline: none;
+}
+
+.sidebar-user-email {
+  width: calc(100% - 40px);
+  margin: 24px auto 0 auto;
+  display: flex;
+  align-items: center;
+  background: #111;
+  color: #ff69b4;
+  border-left: 4px solid #ff69b4;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px #ffd1ec66;
+  padding: 16px 32px;
+  text-align: left;
+}
+
+.sidebar-logout-btn {
+  width: calc(100% - 40px);
+  margin: auto 0 24px 0;
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  right: 20px;
+  background: #111 !important;
+  color: #ff69b4 !important;
+  border: none;
+  border-left: 4px solid #ff69b4;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px #ffd1ec66;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  padding: 16px 32px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.sidebar-logout-btn:hover {
+  background: #222 !important;
+  color: #ffb6d5 !important;
+  border-left: 4px solid #ff69b4;
+}

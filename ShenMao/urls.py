@@ -16,14 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from lessons.views import LessonViewSet, generate_words_view
-
-router = DefaultRouter()
-router.register(r'lessons', LessonViewSet, basename='lesson')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
-    path('api/generate_words/', generate_words_view, name='generate_words'),
+    path('api/', include('lessons.urls')),
 ]
